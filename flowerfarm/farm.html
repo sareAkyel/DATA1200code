@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta lang="en">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/menu.css">
+    <link type="text/css" rel="stylesheet" href="css/spacing.css"> <!-- This stylesheet just adds margins left & right -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html"><strong>HOME</strong><a></li> <!-- 'class="active"' is used with CSS to indicate page currently viewed; i.e.: this code must be updated per page -->
+                <li><a class="active" href="#">The farm</a></li>
+                <li><a href="flowers.html">Flowers</a></li>
+                <li><a href="reserve.html">Reserve</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+<!-- Below are two ways to add an image. First the "old" and still functioning and simple way. 
+    Then a newer method that allows for some manipulation later. -->
+
+    <img src="img/farm.jpeg" alt="The farm is a small white house, a large red barn, and long and narrow flowerfields along a small lake." />
+    <h1>Follo Flower Farm</h1>
+    <p><strong>This part of the document is the ingress. You find it in print, in newspapers and magazines. Here, I have emphazised it with the <code>&lt;strong&gt;</code>-element.</strong></p>
+    <p><em>I could just as well have used the <code>&lt;em&gt;</code>-element ('em' for emphazise).</em> Later, we will use a class-selector instead. The class is defined (styled) in the CSS and then called in the html, changing the element it is a <em>property</em> for.</p> 
+
+    <h2>Tags, elements, properties</h2>
+    <p>All the <code>&lt;p&gt;</code> and <code>&lt;h2&gt;</code> "code" here are tags. Usually, there is an opening and a closing tag. Taken together, it is an element. This text is written inside a paragraph-element, a set of <code>&lt;p&gt;</code>–<code>&lt;/p&gt;</code> tags. An element can have a property. For example, the <code>&lt;img&gt;</code>-tag above, has a <code>&lt;src&gt;</code>-property with a path for the image.</p>
+    
+
+    <h2>Selectors in CSS</h2>
+    <p>In the stylesheet (or multiple stylesheets), 
+        elements can be selectors. <br />For example          , inside the body of this document, there are three sections defined by (semantic) elements: 'header', 'body', and 'footer'. These can be used in CSS to select which elements to style, i.e. thy can be used as <em>selectors</em>. In this page, in the stylesheet "spacing.css", I have used 'main' as a selector to add margins to the image at text, but not the menue on top – which is inside the 'header' element. (At the bootom of the page is a paragraph <em>outside</em> the 'main' element.</p>
+
+    <h3>Selectors can be nested</h3>
+    <picture>
+        <source media="(min-width: 800px)" srcset="img/nested_css_medium.png"> <!-- IF page ≥ 800px, THEN this, ELSE next -->
+        <img srcset="img/nested_css_small.png" alt="Example of nested selectors in a CSS-file"> <!-- please note 'srcset', not 'src' -->
+    </picture>
+    <p>The image above is inside a <code>&lt;picture&gt;</code>-element. Make your browser window small, and see the image change. (And as always, see the code.)</p>
+    <ol>
+        <li><strong>Nesting:</strong></li>
+        <li>This is a list-item inside an ordered list</li>
+            <ul>
+                <li>and this is a list-item, nested inside an unordered list, nested inside the ordered list</li>
+                <li>This nesting is allowed.</li>
+                <li>But nesting a list inside a p-element is <em>not</em> allowed.</li>
+            </ul>
+    </ol>
+    <p>The image above examplifies how we can specify a selector by nesting. Line 13: anchor-tags inside list-items that are themselves in the navigation bar are selected and styled.</p>
+
+    <h2>Learning elements</h2>
+    <p><strong>First of all, note the images.</strong> The first one is as simple code as allowed. &lt;img&gt;-element and alt-text only. No scaling! (Re-size your browser window.) The second one is the simple alternative. <a href="https://www.w3schools.com/tags/tag_picture.asp">The picture-element</a> allows for example switching from a large image to a smaller one. There are more advanced options for scaling pictures, but begin here.</p>
+    <p><strong>Second, in this page supports the reader-mode.</strong> Not big deal, but helpful. <a href="semantic.html">Semantic structure is necessary for the reader-mode to trigger.</a></p>
+    </main>
+
+    <footer><p>Because this paragraph is outside the 'main' element, and only that element is styled in my CSS, this paragraph use only the default margins. Which in browsers is non-zero, but very small.</p></footer>
+ 
+</body>
+</html>

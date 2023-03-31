@@ -1,0 +1,35 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    margin: 0px;
+}
+
+code {font-size: larger;} /* because default is too small */
+
+.ingress {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.centre {
+    text-align: center;
+}
+
+footer { /* styles the entire semantic element "footer", which should only contain non-essential info */
+    background-color: #ccc;
+}
+/* more on semantic elements: https://www.w3schools.com/html/html5_semantic_elements.asp */
+
+/* Decorations */
+.dashborder {
+    border: 2px grey dashed;
+}
+
+.fullborder {
+    margin: 1em;
+    padding: 0.4em;
+    border-width: 4px;
+    border-style: dotted;
+    border-color: darkslategrey;
+}
+

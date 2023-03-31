@@ -1,0 +1,33 @@
+body {
+    /* background-color: aqua; */
+    background-color: var(--colour-body);
+}
+
+h1, h2, h3, h4, p {
+    color: var(--colour-font-primary);
+}
+
+h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+code {
+    color: var(--colour-font-auxillary);
+}
+
+/* All the variations var(); listed here */
+:root {
+    --colour-body: #e5e7f0;
+    --colour-font-primary: #000000;
+    --colour-font-secondary: #4a4cad;
+    --colour-font-auxillary: #333333;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --colour-body: #522121;
+        --colour-font-primary: #f9f9f9;
+        --colour-font-secondary: #a8a9d8;
+        --colour-font-auxillary: #f9ddf9;
+    }
+}

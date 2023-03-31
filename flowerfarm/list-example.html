@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta lang="en">
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/menu.css" />
+    <link type="text/css" rel="stylesheet" href="css/spacing.css" /> <!-- This stylesheet just adds margins left & right -->
+    <link type="text/css" rel="stylesheet" href="css/descendancy.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html"><strong>HOME</strong><a></li> <!-- 'class="active"' is used with CSS to indicate page currently viewed; i.e.: this code must be updated per page -->
+                <li><a class="active" href="#">The farm</a></li>
+                <li><a href="flowers.html">Flowers</a></li>
+                <li><a href="reserve.html">Reserve</a></li>
+                <li><a href="https://www.nrk.no">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>These are our flowers</h1>
+        <h2>Unordered list, nested for sub-lists</h2>
+        <ul>
+            <li>Hepatica</li>
+            <li>Crocus</li>
+            <li>Primrose</li>
+            <li>Snow Flake</li>
+            <li>Germander Speedwell</li>
+            <li>Yellow Archangel</li>
+            <ul>
+                <li>Also known as:</li>
+                <ul>
+                    <li>artillery plant</li>
+                    <li>aluminium plant</li>
+                    <li>yellow weasel-snout</li>
+                </ul>
+            </ul>
+        </ul>
+
+        <h2>Ordered lists</h2>
+        <h3>Standard</h3>
+        <ol>
+            <li>Magnoliid</li>
+                <ol><li>Annonaceae</li>
+                    <li>Cyperaceae</li>
+                </ol> 
+            <li>Monocot</li>
+            <ol><li>Araceae</li>
+                <li>Proteaceae</li>
+                <li>Yellow Archangel</li>
+            <ol>
+                <li>Also known as:</li>
+                <ol>
+                    <li>artillery plant </li>
+                    <li>aluminium plant</li>
+                    <li>yellow weasel-snout</li>
+                </ol>
+            </ol>
+            </ol>            
+        </ol>
+
+        <h3>Type: 'a', but 'sub-bullets' are standard</h3>
+        <ol type="a">
+            <li>Asterid</li>
+                <ol><li>Acanthaceae</li>
+                <li>Gentianaceae</li></ol>
+            <li>Rosid</li>
+                <ol><li>Brassicaceae</li></ol>
+        </ol>
+        <h3>Type: 'i', but 'sub-bullets' "unordered" list, <code>&lt;ul&gt;</code></h3>
+        <ol type="i">
+            <li>Asterid</li>
+                <ul>
+                    <li>Acanthaceae</li>
+                    <li>Gentianaceae</li>
+                </ul>
+            <li>Rosid</li>
+                <ul><li>Brassicaceae</li></ul>
+        </ol>
+    </main>
+    </body>
+    </html>

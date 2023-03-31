@@ -1,0 +1,228 @@
+.page-header-box, .page-footer-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* START: Shared between MULTIPLE screen sizes; write once, re-use */
+    /* Txt-containers */
+    .line1-left {
+        padding-left: 1em;
+        padding-right: 1em;
+        background-color: #fa9696;
+        }
+
+    .line2-right {
+        padding-left: 1em;
+        padding-right: 1em;
+        background-color: #dda0dd;
+        }
+
+    .line3-left {
+        padding-left: 1em;
+        padding-right: 1em;
+        background-color: linen;
+        }
+
+    .line4-right {
+        padding-left: 1em;
+        padding-right: 1em;
+        background-color: rgb(230, 230, 180);
+        }
+
+    /* Img-containers */
+    .line1-right {
+        background-image: url(../img/redflower.jpeg);
+        background-size: cover;
+        background-position: top;
+        position: left;
+        }
+
+    .line2-left {
+        background-image: url(../img/purpleflower.jpeg);
+        background-size: cover;
+        background-position: top;
+        position: left;
+        }
+
+    .line3-right {
+        background-image: url(../img/smallwhiteflower.jpeg);
+        background-size: cover;
+        background-position: top;
+        position: left;
+        }
+
+     .line4-left {
+        background-image: url(../img/yellowwildflowers.jpeg);
+        background-size: cover;
+        background-position: top;
+        position: left;
+        }
+
+/* END: Shared ALL screen sizes */
+
+/* START:  Screen-width dependent styling */
+@media only screen and (max-width: 800px) {
+main {
+    background-color: linen;
+}
+.wrapper {
+    display: grid; /* grid, rather than 'flex'-alternative; grid is two dimentional (columns & rows) while flex is either-or */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px; /* gap between boxes, here both bot width & height, could be either or */
+    grid-auto-rows: minmax(300px, auto);
+}
+
+.linem1 {
+    border-top: 2px dashed teal;
+    grid-column: 1 / 6;
+    grid-row: 1;
+}
+
+.line1-right {
+    grid-column: 3 / 6;
+    grid-row: 2;
+}
+
+.line2-left {
+    grid-column: 1 / 4;
+    grid-row: 4;
+    }
+                
+.linem3 {
+    border-top: 2px dashed teal;
+    grid-column: 1 / 6;
+    grid-row: 3;
+        }
+
+.linem5 {
+    border-top: 2px dashed teal;
+    grid-column: 1 / 6;
+    grid-row: 5;
+}
+
+.line3-right {
+    grid-column: 3 / 6;
+    grid-row: 6;
+}
+
+.linem7 {
+    border-top: 2px dashed teal;
+    grid-column: 1 / 6;
+    grid-row: 7;
+        }
+
+.line4-left {
+    grid-column: 3 / 6;
+    grid-row: 8;
+}
+
+    }
+    
+
+
+@media only screen and (min-width: 801px) {
+.wrapper {
+    display: grid; /* grid, rather than 'flex'-alternative; grid is two dimentional (columns & rows) while flex is either-or */
+    grid-template-columns: repeat(8, 1fr);
+    gap: 6px; /* gap between boxes, here both bot width & height, could be either or */
+    grid-auto-rows: minmax(100px, auto); /* 'minmax' allows the boxes to stretch out, but not become too small */
+}
+
+/* Row by row, two columns, Left-aligned & Right-aligned.
+If narrow screen, the L stack above R, so line1-right becomes 2nd row*/
+.line1-left {
+    grid-column: 1 / 6;
+    grid-row: 1;
+}
+
+.line1-right {
+    grid-column: 6 / 9;
+    grid-row: 1;
+}
+
+.line2-left {
+    grid-column: 1 / 4;
+    grid-row: 2;
+}
+
+.line2-right {
+    grid-column: 4 / 9;
+    grid-row: 2;
+}
+
+.line3-left {
+    grid-column: 1 / 6;
+    grid-row: 3;
+    }
+            
+.line3-right {
+    grid-column: 6 / 9;
+    grid-row: 3;
+    }
+
+.line4-left {
+    grid-column: 1 / 4;
+    grid-row: 4;
+}
+
+.line4-right {
+    grid-column: 4 / 9;
+    grid-row: 4;
+    }
+
+            }
+
+
+@media only screen and (min-width: 1201px) {
+.wrapper {
+    display: grid; /* grid, rather than 'flex'-alternative; grid is two dimentional (columns & rows) while flex is either-or */
+    grid-template-columns: repeat(8, 1fr);
+    gap: 8px; /* gap between boxes, here both bot width & height, could be either or */
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: minmax(60px, auto);
+    }
+            
+.line1-left {
+    grid-column: 2 / 6;
+    grid-row: 1;
+    }
+            
+.line1-right {
+    grid-column: 6 / 8;
+    grid-row: 1;
+    }
+
+.line2-left {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    }
+                
+.line2-right {
+    grid-column: 4 / 8;
+    grid-row: 2;
+        }
+
+.line3-left {
+    grid-column: 2 / 6;
+    grid-row: 3;
+    }
+            
+.line3-right {
+    grid-column: 6 / 8;
+    grid-row: 3;
+    }
+
+.line4-left {
+    grid-column: 2 / 4;
+    grid-row: 4;
+}
+
+.line4-right {
+    grid-column: 4 / 8;
+    grid-row: 4;
+    }
+
+         }
+/* END Screen-width dependent styling */
