@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta title="FlowerFarmFollo">
+    <meta lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/menu.css">
+    <!-- <link type="text/css" rel="stylesheet" href="css/grid.css"> -->
+    <link type="text/css" rel="stylesheet" href="css/boxmodes.css">
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html"><strong>HOME</strong><a></li>
+                <li><a href="farm.html">Farm</a></li>
+                <li><a href="flowers.html">Flowers</a></li>
+                <li><a class="active">Reservere</a></li>
+                <li><a href="list-example.html">List-examples</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+<div class="content">
+    <p>From w3Schools: By default, the width and height of an element is calculated like this:</p>
+    <p>width + padding + border = actual width of an element
+        height + padding + border = actual height of an element</p>
+    <p>This means: When you set the width/height of an element, the element often appears bigger than you have set (because the element's border and padding are added to the element's specified width/height).</p>
+    <p><strong><a href="https://www.w3schools.com/css/css3_box-sizing.asp"></a>Please take a look at w3schools.com about this issue!</strong></p>
+    <p>This is a content-box.</p>
+</div>
+
+<div class="border">
+    <p>Since the result of using the box-sizing: border-box; is so much better, many developers want all elements on their pages to work this way.</p>
+    <p>The code below ensures that all elements are sized in this more intuitive way. Many browsers already use box-sizing: border-box; for many form elements (but not all - which is why inputs and text areas look different at width: 100%;).</p>
+    <p class="ingress">Applying this to all elements is safe and wise:</p> 
+    <pre><code>
+        * {
+            box-sizing: border-box;
+          }
+    </code></pre>
+    <p>This is a border-box.</p>
+</div>
+
+
+    </main>
+
+<footer>
+<div class="page-footer-box">
+    <p>All pictures taken by Tengel Sandtrø (tengel@oslomet.no) CC-sa. This site with all pages are created as part of an introductory course in web-design. Code is as far as possible taken from <a href="https://www.w3schools.com">w3schools</a> and <a href="https://developer.mozilla.org">mdn we docs</a>.</p>
+    <p>The code is not necessarily best practice, as it is chosen and used to illustrate concrete examples of techniques. For example, the use of selectors like 'id', or the use of out-fashion elements like &lt;<code>b</code>&gt;</p>
+    <p><b>2022</b> <strong>OsloMet</strong></p> <!-- "Bold" is purely styling (which should be defined in CSS), while "Strong" is accepted as a semantic element, even if it is pre-defined in browsers and work as a stylistic element as well. HTML5 states that &lt;<code>b</code>&gt; should rather not be used. -->
+</div>
+
+</footer>
+</body>
+</html>

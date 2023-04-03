@@ -1,5 +1,5 @@
 /* https://www.w3schools.com/css/css_combinators.asp 
-    ::cue-regionwords: Combinators; Descendancy; Child*/
+    :key-words: Combinators; Descendancy; Child */
 
 ol li {
     color: blue;
@@ -12,3 +12,14 @@ ol > li {
 ol * li {
     font-weight: lighter;
 }
+
+/* If you have bothered to read this code, 
+may I suggest you spend 3 minutes in "geek-space"?
+
+In VS Code, a 'tabulator' (tab) is converted into 4 spaces.
+But do you know about the old "tabs vs spaces" debate?
+It is well known enough to feature in "Silicon Valley from HBO
+https://www.youtube.com/watch?v=SsoOG6ZeyUI 
+
+The argument that "a tab may look different on a different computer" == true
+The argument that "it makes no difference after compiler"? HTML & CSS are not compiled */
