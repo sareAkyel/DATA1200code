@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/main.css">
     <link type="text/css" rel="stylesheet" href="css/menu.css">
-    <!-- Un-comment me! As you read on, remove this comment (but keep the code inside) and refresh page
+<!-- Un-comment me! As you read on, remove this comment (but keep the code inside) and refresh page
         <link type="text/css" rel="stylesheet" href="css/spacing.css">
-    -->
+-->
 </head>
 
 <body> 
@@ -19,7 +19,7 @@
     <header>
         <nav>
             <ul class="navbar">
-                <li><a class="active" href="#"><strong>HOME</strong><a></li> <!-- 'class="active"' is used with CSS to indicate page currently viewed; i.e.: this code must be updated per page -->
+                <li><a class="active" href="index.html"><strong>HOME</strong><a></li> <!-- 'class="active"' is used with CSS to indicate page currently viewed; i.e.: this code must be updated per page -->
                 <li><a href="farm.html">The farm</a></li>
                 <li><a href="flowers.html">Flowers</a></li>
                 <li><a href="#">Reserve</a></li>
@@ -33,7 +33,7 @@
 <h1>Welcome to Flower Farm Follo</h1>
 
 <p>And welcome to the page "index.html"! When a link points to a folder (also known as a directory), the browser will look for "index.html". Without an index.html, any link or web address must point to a specific file, like https://www.oslomet.no/welcome.html.</p> 
-<p>This is a general paragraph. The second one, in fact. As you can see, when we define a paragraph, the browser will by default add space above or below. Now, it is not a very nicely formated paragraph, running all the way from edge to edge of the browser. Therefor, in the code, remove the comment that says "Un-comment me" in the &lt;head&gt;. (It's the "link" for "spacing.css"</p>
+<p>This is a general paragraph. The second one, in fact. As you can see, when we define a paragraph, the browser will by default add space above or below. Now, it is not a very nicely formated paragraph, running all the way from edge to edge of the browser. Therefor, in the code, remove the comment that says "Un-comment me" in the &lt;head&gt;. (It's the "link" for "spacing.css") See more below.</p>
 
 <p>For an example of the absolute simplest html you can expect a browser to display, go to <a href="simplest.html">simplest.html</a>.</p>
 <p>
@@ -46,6 +46,12 @@
     </code><br />
     ...that is all you need — but <em>correct</em> HTML needs more!
 </p>
+
+<h2>About this page</h2>
+<p class="ingress">This page has a CSS-sheet that removes the default margin, so there is no space between the left-most edge of the browser and the text.</p>
+<p>The <code>main.css</code> sets the 'body' to 'margin: 0'. While <code>spacing.css</code> sets the 'main' to 'margin-left: 2rem;' — that link has been commented out. Therefore, it does not apply. Doesn't look good, does it? But if you take this code and remove the commenting-out, <code>spacing.css</code> will apply and the page looks much better.</p>
+<p><strong>Alternatively, simply go to "The Farm"-page.</strong> (Menu at top.) That page has both stylesheets </p>
+
 
 <!-- Of the rest, only /body /html is essential for this page to resolve -->
     </main>
