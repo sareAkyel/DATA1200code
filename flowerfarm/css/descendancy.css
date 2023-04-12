@@ -13,6 +13,8 @@ ol * li {
     font-weight: lighter;
 }
 
+li {display: inline;}
+
 /* If you have bothered to read this code, 
 may I suggest you spend 3 minutes in "geek-space"?
 

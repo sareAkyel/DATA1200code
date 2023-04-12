@@ -6,6 +6,14 @@ body {
 
 code {font-size: larger;} /* because default is too small */
 
+/* Pseudo-classes */
+a {text-decoration: underline;} /* just an example of styling the 'a' (link) element */
+    /* Below, we use pseudo-classes to style _states_ of elements 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes */
+        a:active {color:darkblue;}
+        a:visited {color: purple;} /* try making it fuchsia :-D */
+/* If you end up working with webdesign, pseudo-classes and pseudo-elements are useful */
+
 .ingress {
     font-weight: 500;
     font-style: italic;

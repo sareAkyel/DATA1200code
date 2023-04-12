@@ -1,7 +1,8 @@
 /* This is just for some simple experiments with the index.html;
 normaly, this would be part of the main.css (if necessary) */
 
-main { /* 'main' is the semantic element inside the body-element; try changing this to 'body' */
+main { /* 'main' is the semantic element inside the body-element; 
+    try changing this to 'body' */
     margin-left: 2rem;
     margin-right: 2rem;
 }
@@ -40,7 +41,8 @@ Usually, we would have a @media-query first for mobile phones **/
     padding: 20px;
 }
 
-/* This part certainly does not belong in _this_ CSS, but it is just to make the page less ugly :-) */
+/* This part certainly does not belong in _this_ CSS, 
+but it is just to make the page less ugly :-) */
 .outlined {
     color: black;
     font-size: calc(1.2rem + 1.2vw);
