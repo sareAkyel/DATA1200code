@@ -1,0 +1,50 @@
+/* This is just for some simple experiments with the index.html;
+normaly, this would be part of the main.css (if necessary) */
+
+main { /* 'main' is the semantic element inside the body-element; 
+    try changing this to 'body' */
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.oneTab {
+    margin-left: 4rem;
+}
+
+/* For the 'about.html' page */
+/** This scaling is for desktop only 
+Usually, we would have a @media-query first for mobile phones **/
+.flex-background-01 {
+    background-image: url("../img/widebackground.png"); /* just image */
+    background-size: cover; /* image covers entire box */
+    background-position: top; /* not even certain this is necessary ;-p */
+    width: 60vmax; /* max of view-port, i.e. browser width OR height — 60 % */
+    max-width: 1000px; /* Don't scale beyond 1000px width */ 
+    min-width: 500px; /* Don't scale narrower than 500px width */
+    height: 10vw; /* set the height (10 % of browser window height) */
+}
+
+.flex-background-02 {
+    background-color: bisque; /* just colour */
+    background-size: cover; /* see above */
+    background-position: top;
+    width: 60vmax;
+    max-width: 1000px;
+    min-width: 500px;
+    height: 30vmax;
+    box-sizing: border-box; /* remove this, and the padding will be _outside_ box; 
+    see https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model */
+    padding: 2rem;
+}
+
+.padding {
+    padding: 20px;
+}
+
+/* This part certainly does not belong in _this_ CSS, 
+but it is just to make the page less ugly :-) */
+.outlined {
+    color: black;
+    font-size: calc(1.2rem + 1.2vw);
+    padding: 2vw;
+}
