@@ -12,4 +12,4 @@ The second is a site with more complete and (hopefully!) only valid code.
 The last is a rather ugly attempt to demonstrate scaling with flex-boxes. There are guides to do this on [w3schools.org](https://www.w3schools.com/css/css_grid.asp) and [developer.Mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout), and several other places. My example code is just actual example code to play around with, rather than an introduction or guide to how (and why).   
 
 ***But there is a fourth directory?***   
-— Ah, yes, the "Interactive". As of now, this is a back-up in case I want to bridge DATA1200 into DATA1700 (JavaScript) that is taught in the spring semester. You should ignore this for now.
+— Ah, yes, the "Interactive". As of now, this is a back-up in case I want to bridge DATA1200 into DATA1700 (JavaScript) that is taught in the spring semester. You should ignore this for now. I may forget to push changes if I work on this, as it is currently not in my plan.
