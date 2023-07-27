@@ -1,7 +1,7 @@
-<!DOCTYPE html><!-- Always! (even though browsers ofte resolve page without it) -->
+<!DOCTYPE html><!-- Always! (even though browsers often resolve page without it) -->
 <html lang="en">
 <head>
-    <title>FlowerFarmFollo"</title>
+    <title>FlowerFarmFollo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/main.css">
@@ -9,6 +9,7 @@
     <link type="text/css" rel="stylesheet" href="css/spacing.css">
     <link type="text/css" rel="stylesheet" href="css/javascript-oppgaver.css">
     <!-- <script src="script/ukeoppgave1.js" defer></script> -->
+
     <script type="text/javascript">
 
 function inTxt(innData) {
@@ -37,7 +38,7 @@ let listeLengde = liste.length;
 for (let i = 0; i<listeLengde; i++){
         document.write = (liste[i] + " ");
     }
-    document.write();
+    // document.write();
 
     </script>
 </head>
@@ -48,10 +49,6 @@ for (let i = 0; i<listeLengde; i++){
         <nav>
             <ul class="navbar">
                 <li><a class="active" href="#"><strong>HOME</strong><a></li> <!-- 'class="active"' is used with CSS to indicate page currently viewed; i.e.: this code must be updated per page -->
-                <li><a href="farm.html">The farm</a></li>
-                <li><a href="flowers.html">Flowers</a></li>
-                <li><a href="#">Reserve</a></li>
-                <li><a href="https://www.nrk.no">About</a></li>
             </ul>
         </nav>
     </header>
@@ -59,7 +56,7 @@ for (let i = 0; i<listeLengde; i++){
         <div class="oneTab">
         <br />
         <form>
-            <input type="text" title="firstName" onchange="inTxt(this.value);" />
+            <input type="text" title="Name" onchange="inTxt(this.value);" />
         </form>
         <br />
         <button class="buttonP" onclick="inTxt()">Klikk</button>
@@ -75,11 +72,7 @@ for (let i = 0; i<listeLengde; i++){
 
     </main>
     <footer>
-        <div class="page-footer-box">
-            <p>All pictures taken by Tengel Sandtrø (tengel@oslomet.no) CC-sa. This site with all pages are created as part of an introductory course in web-design. Code is as far as possible taken from <a href="https://www.w3schools.com">w3schools</a> and <a href="https://developer.mozilla.org">mdn webdocs</a>.</p>
-            <p>The code is not necessarily best practice, as it is chosen and used to illustrate concrete examples of techniques. For example, the use of selectors like 'id', or the use of out-fashion elements like &lt;<code>b</code>&gt;</p>
-            <p><b>2022</b> <strong>OsloMet</strong></p> <!-- "Bold" is purely styling (which should be defined in CSS), while "Strong" is accepted as a semantic element, even if it is pre-defined in browsers and work as a stylistic element as well. HTML5 states that &lt;<code>b</code>&gt; should rather not be used. -->
-        </div>
+        <p>Is this meaningless? Maybe you don't have JavaScript console open?</p>
     </footer>
 </body>
 </html>
