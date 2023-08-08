@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semantic elements</title>
+    <meta charset="utf-8">
+    <meta lang="en">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+        <link type="text/css" rel="stylesheet" href="css/frustration.css">
+    <link type="text/css" rel="stylesheet" href="css/menu.css">
+    <link type="text/css" rel="stylesheet" href="css/spacing.css"> <!-- This stylesheet just adds margins left & right -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html"><strong>HOME</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Everything in 'Main' visible in 'Reader-mode'-->
+    <main>
+        <h1>The semantic web and semantic elements in HTML</h1>
+        <p>The entire debate about the Semantic web is <em>far</em> too long to be taken in a 5 ECTS course! But it is important if you choose to work as a web-/ front-end developer. Or for some of those who will work with bots. Below are those elements that are most relevant for DATA1200, not necessarily those that will be most important for you.</p>
+
+        <p><a href="https://en.wikipedia.org/wiki/Semantic_Web">Wikipedia actually has a good-ish introduction</a> to the debate. But more relevant, <a href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">Mozilla has a list of semantic terms</a>. And <a href="https://www.w3schools.com/accessibility/accessibility_semantic_elements.php">w3schools has a good introduction to how semantic elements improve accessibility</a>. (Go beyond the first page, please.)</p>
+
+        <h2>Most relevant for you:</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header"><code>&lt;header&gt;</code></a>, usually topmost part of <code>&lt;body&gt;</code>, often repeated between pages, often contains the &lt;nav&gt;</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"><code>&lt;nav&gt;</code></a>, often inside the &lt;header&gt;, usually the navigation menu</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main"><code>&lt;main&gt;</code></a>, all the actual content (inside <code>&lt;body&gt;</code>)</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer"><code>&lt;footer&gt;</code></a>, at the bottom, often repeated between pages, often contains the contact-info</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article"><code>&lt;article&gt;</code></a>, content, should have a heading, may be multiple per page, inside &lt;main&gt;</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section"><code>&lt;section&gt;</code></a>, read the Mozilla guide before you use!</li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div">Please note that <code>&lt;div&gt;</code></a> is <em>not</em> a semantic element!</li>
+        </ul>
+
+
+        <h2>Semantic elements and reader-mode</h2>
+        <p>If you want to trigger the <strong>reader mode</strong> in browsers, you should use at least the <code>&lt;main&gt;</code>. Below are two images of Firefox, the first one in normal mode, the second in reader-mode. As you can see, the grey "footer" that is outside the <code>&lt;main&gt;</code>-element is <em>not</em> displayed in reader-mode.</p>
+        <p>The images, by the way, are in a grid. In reader-mode, rather than scale, the grid-elements are stacked below eachother. Here, they are set to scale to 100% &mdash; <code>&lt;img src="…" width="100%" alt="…"&gt;</code> &mdash; which will look bad on super-wide screens; and not very good on mobile screens either.</p>
+        <div class="wrapper-half">
+            <div class="left-half">
+                <img src="img/reader-off.png" width="100%" alt="normal browser behaviour">
+            </div>
+            <div class="right-half">
+                <img src="img/reader-on.png" width="100%" alt="this is what reader-mode of the same page looks like">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Because this paragraph is outside the 'main' element, and only that element is styled in my CSS, this paragraph use only the default margins. Which in browsers is non-zero, but very small.</p>
+    </footer>
+ 
+</body>
+</html>

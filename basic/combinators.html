@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combining selectors</title>
+    <meta lang="en">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/combinators.css">
+</head>
+
+<body>
+    <h1>CSS combinators</h1>
+    <h2>Text outside any box</h2>
+    <p>Combinators are described by both <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Mozilla</a> and <a href="https://www.w3schools.com/css/css_combinators.asp">W3Schools</a>. They describe adjacent sibling selectors (+) and general sibling selector (~). I have not spotted these "in the wild", so I focus on all decendants and direct decendants (children) only.</p>
+    <p>The text here makes no sense unless you open the HTML and CSS code.</p>
+
+    <p>A list outside any box (div)</p>
+    <ul>
+        <li>List just to show</li>
+        <li>an alternative font</li>
+        <li>compared to H1, H2, P &c</li>
+            <ul>
+                <li>Level 2 list item</li>
+            </ul>
+    </ul>
+    <div class="all">
+        <h2>Decendants == children, grand-children, and so on</h2>
+        <p>This is a paragraph with the nested element <code>&lt;code&gt;, styled as it is a decendant.</code></p>
+        <code>&lt;code&gt; outside the P-element (not nested), styled as it is a decendant.</code>
+        <ul>
+            <li>List inside</li>
+            <li>the 'all' box</li>
+            <li>All are green, as they are all decendants of the box (&lt;div class="all"&gt;)</li>
+                <ul>
+                    <li>Level 2 list item</li>
+                    <ul>
+                        <li>Level 3 list item</li>
+                    </ul>
+                </ul>
+        </ul>
+    </div>
+
+    <div class="child">
+        <h2>Children == direct decendants only, not grand-children</h2>
+        <p>This is a paragraph with the nested element <code>&lt;code&gt;, <em>not</em> styled, as it is <em>not</em> a direct child.</code></p>
+        <code>&lt;code&gt; outside the P-element (not nested), styled as it is a direct child.</code>
+        <ul>
+            <li>List inside</li>
+            <li>the 'child' box</li>
+            <li>None are green, as they are not direct decendants (children) of the box (&lt;div class="Children"&gt;)</li>
+                <ul class="child">
+                    <li>Level 2 list item — here with the added class (to the UL)</li>
+                    <ul>
+                        <li>Level 3 list item</li>
+                    </ul>
+                </ul>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/** FIRST we have regular CSS, classes and a pseudo-class **/
+body {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+}
+
+/* here, several elements are styled in one sentence — no relationship between these elements */
+h1, h2, p {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h2 {
+    font-weight: lighter;
+}
+
+
+
+/** SECOND, we have decendants, a form of combinators **/
+/* Mozilla has a good introduction! 
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators */ 
+
+/* first, I make the box white, so that all the headings, paragraphs and such are the "wrong" colour */
+.all {
+    background-color: antiquewhite;
+    padding-left: 12px; /* padding == inside "box", margin would have been outside */
+    padding-top: 2px;
+    padding-bottom: 6px;
+}
+
+/* then list the elements that should have a different colour within the "all" div */
+.all li {
+    color: darkgreen;
+}
+
+.all code {
+    font-weight: 600;
+}
+
+/** THEN we have direct-children only **/
+.child {
+    background-color: lightcyan;
+    padding-left: 12px; /* padding == inside "box", margin would have been outside */
+    padding-top: 2px;
+    padding-bottom: 6px;
+}
+
+/* <li> is a direct child of <ul>, NOT of the <div class="child">-element; hence this is ignored for the box, but I added the class to an UL as well */
+.child > li {
+    color: darkgreen;
+}
+
+.child > code {
+    font-weight: 600;
+}
+
+h2.centre { /* valid: Yes; usefull: ?? */
+    text-align: center; 
+}

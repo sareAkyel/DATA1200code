@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Farm-images (img & picture)</title>
     <meta charset="utf-8">
     <meta lang="en">
     <link type="text/css" rel="stylesheet" href="css/main.css">
@@ -40,8 +41,9 @@
 
     <h3>Selectors can be nested</h3>
     <picture>
-        <source media="(min-width: 800px)" srcset="img/nested_css_medium.png"> <!-- IF page ≥ 800px, THEN this, ELSE next -->
-        <img srcset="img/nested_css_small.png" alt="Example of nested selectors in a CSS-file"> <!-- please note 'srcset', not 'src' -->
+        <source media="(min-width: 800px)" srcset="img/nested-css-medium.png"> 
+        <!-- IF page ≥ 800px, THEN this, ELSE next -->
+        <img srcset="img/nested-css-small.png" alt="Example of nested selectors in a CSS-file"> <!-- please note 'srcset', not 'src' -->
     </picture>
     <p>The image above is inside a <code>&lt;picture&gt;</code>-element. Make your browser window small, and see the image change. (And as always, see the code.)</p>
     <ol>

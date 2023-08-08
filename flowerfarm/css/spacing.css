@@ -1,8 +1,7 @@
 /* This is just for some simple experiments with the index.html;
 normaly, this would be part of the main.css (if necessary) */
 
-main { /* 'main' is the semantic element inside the body-element; 
-    try changing this to 'body' */
+main { /* 'main' is the semantic element inside the body-element; try changing this to 'body' */
     margin-left: 2rem;
     margin-right: 2rem;
 }
