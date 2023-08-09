@@ -1,0 +1,48 @@
+@media (max-width: 800px) {
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 0px 0px;
+    box-shadow: 0 100px 8px #ddd;
+}
+
+ul.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    display: inline;
+}
+
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    color: black;
+    text-decoration: none;
+    background-color: lightgrey;
+    padding: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#active {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    color: white;
+    text-decoration: none;
+    background-color: lightgrey;
+    padding: 10px;
+}

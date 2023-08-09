@@ -1,0 +1,65 @@
+/* Notice how the code below does not remove the margin (noticable left and right on screen).
+It takes the 'body' margins as baseline. Therefore, you would need to set 
+ body {
+    margin: 0px;
+ }
+ to actually remove the margins.
+
+ Alternatively, try to set 
+ div {
+    margin: -5px;
+ }
+At least in Chrome, that will move the boxes to the edge of the browser.
+ */
+
+div {
+    margin: 0px;
+}
+/* The code above was for educational reasons only, you don't need it! */
+
+
+.container-flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* These two lines, shorthand: flex-flow: row wrap; */
+    justify-content: left;
+}
+
+.big-box {
+    background: rgb(200, 100, 90);
+    padding: 5px;
+    width: 300px;
+    height: 150px;
+    margin-top: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+.sub-one {
+    background: rgb(120, 240, 120);
+    padding: 5px;
+    width: 300px;
+    height: 150px;
+    margin-top: 10px;
+/*     line-height: 150px;
+    color: white;
+    font-weight: bold; */
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.sub-two {
+    background: rgb(140, 140, 250);
+    padding: 5px;
+    width: 300px;
+    height: 150px;
+    margin-top: 10px;
+     line-height: 2em;
+/*    color: white;
+    font-weight: bold; */
+    font-size: 1.2em;
+    text-align: left;
+}

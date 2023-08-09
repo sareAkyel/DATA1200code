@@ -1,0 +1,48 @@
+/* Suggested source:
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout 
+
+I use 'wrapper' here, but it can be anything.
+w3schools use 'grid-container' */
+
+body {
+    margin: 0px;    
+}
+
+.wrapper {
+    display: grid;
+    /* grid-template-columns: 10% 20% 20% 20% 20% 10%; example with percentages */
+    /* grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr; example with fractions*/
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr 100px; /* example w/ mix absolute & relative sizes */
+  }
+
+  .box-full {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    background-color: black;
+    padding: 20px;
+  }
+
+  .box-left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .box-main {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    background-color: wheat;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+  }
+
+  .box-aux-right {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    background-image: "../images/sunset.svg";
+  }
+
+/* Customizing elements inside specific grid boxes */
+.box-full > h1 {
+    color: antiquewhite;
+    vertical-align: middle;
+}
