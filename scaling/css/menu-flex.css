@@ -46,3 +46,7 @@ nav a:hover {
     background-color: lightgrey;
     padding: 10px;
 }
+
+.right-align {
+    margin-left: auto;
+}
