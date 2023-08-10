@@ -71,6 +71,7 @@ p {
 .menu {
   display: flex; 
   flex-direction: row; /* Wide screen: Menu items after each other on a horizontal line */
+  justify-content: flex-start;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -82,6 +83,10 @@ p {
 
 #burger-toggle { /* Wide screen: Hide the burger-image! */
   display: none;
+}
+
+.menu > li {
+    padding-left: 40px;
 }
 
 @media (max-width: 700px) {
