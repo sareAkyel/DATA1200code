@@ -1,0 +1,161 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.4em;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
+    border-top: #888 dashed;
+    margin-bottom: 0px;
+}
+
+/* used in 1, 2, 3 */
+.nav li, a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* 1 */
+.space-between {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* 2 */
+.no-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.menubox {
+    background: rgb(200, 220, 235);
+    padding-left: 5px;
+    padding-right: 5px;
+    width: auto;
+    height: 25px;
+    text-align: center;
+}
+
+/* 3 */
+.dual-align {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0px;
+    justify-content: flex-start; /* Default is "flex-start", so it is unneccessary to include it here 😄 */
+    gap: 1vw; /* Scales as you re-size browser window, just for funsies here! */
+}
+
+.dual-align li:last-child { /* sets the last list-item apart (as much margin on the left as possible */
+    margin-left: auto;
+}
+
+.dual-align li {
+    margin: 0px; /* If you remove "gap" in the container, you may manipulate this instead */
+    border-radius: 5px;
+    background: rgb(200, 235, 225);
+    color: #888;
+	display: flex;
+	padding: 5px 10px 5px 10px;
+}
+
+
+
+
+/** 4 **/
+.menu {
+  display: flex; 
+  flex-direction: row; /* Wide screen: Menu items after each other on a horizontal line */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-button-container { /* Wide screen: Hide the burger-box! */
+    display: none;
+}
+
+#burger-toggle { /* Wide screen: Hide the burger-image! */
+  display: none;
+}
+
+@media (max-width: 700px) {
+    .burger-navigation { /* Just to create a background box */
+        width: 100vw; /* Needed to fill from left to right. Remove & there is a gap on the right */
+        background-color: #888;
+        margin-left: -8px; /* So... I've done something stupid, so I need to offset the left margin*/
+        padding-left: 8px;
+        padding-top: 2px; /* A bit of space above the burger */
+        padding-bottom: 4px; /* A bit of space below the burger */
+    }
+
+    .burger-navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+        height: 40px;
+    }
+
+    .menu-button-container {
+        display: flex;
+        height: auto;
+        width: 40px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-button,
+    .menu-button::before,
+    .menu-button::after {
+      display: block;
+      background-image: url(../images/burger.png);
+      background-size: cover; /* "cover" stretch image to fill box */
+      position: absolute;
+      height: 40px;
+      width: 40px;
+    }
+    
+    #burger-toggle + .menu-button-container {
+      margin: 0px;
+    }
+
+    .menu {
+        position: sticky;
+        margin-top: 0px; /* postitions pop-up menu _relative_ to the hamburger */
+        margin-left: -5px; 
+        flex-direction: column; /* stacks the menu-entries beneath each other */
+        height: 220px;
+        justify-content: center;
+        align-content: initial;
+    }
+
+    .menu > li {
+        overflow: hidden; /* Hide menu 'li' text unless burger (input) checked */
+        display: flex;
+        margin: 0;
+        width: 200px; /* Width of menu. For mobile, maybe 100 % had been better?? */
+        background-color: #ccc; /* Without bg-colour, text underneath the menu is _not_ covered */
+      }
+
+    #burger-toggle ~ .menu li { /* Before you click: Hidden */ /* ~ is a "general sibling selector"  */
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    #burger-toggle:checked ~ .menu li { /* After you click: Display */
+        border-width: 1px;
+        border-style: solid;
+        border-color: #333;
+        height: 1em;
+        padding: 0.5em;
+    }
+}

@@ -1,48 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
 <head>
+    <meta charset="UTF-8">
     <title>DATA1200 flex-box as menu-example</title>
-    <link type="text/css" rel="stylesheet" href="css/main-style.css">
-    <link type="text/css" rel="stylesheet" href="css/menu-flex.css">
-    <link type="text/css" rel="stylesheet" href="css/flex-box-screenwidth.css">
+    <link type="text/css" rel="stylesheet" href="css/flex-box-menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <header>
         <nav>
-        <ul class="navigation">
-            <li><a href="second-step.html">Second step</a></li>
-            <li><a href="flex-box-basic.html">Simple flex-box</a></li>
-            <li><a href="flex-box-screenwidth.html">Improved flex-box</a></li>
-            <li><a href="flex-menu-example.html">Menu-flex</a></li>
-            <li><a href="third-step.html">Moving on</a></li>
-        </ul>
         </nav>
     </header>
     <main>
-        <div class="container-flexbox">
-            <div class="big-box">
-        <p>Main text</p>
+        <h1>Below are the menu with different attributes/ values</h1>
+        <p>1) Simple menu, one 'div' flex-box container with list items:</p>
+        <div class="menubox">
+        <ul class="space-between nav">
+            <li><a href="second-step.html">Second step</a></li>
+            <li><a href="flex-box-basic.html">Simple flex-box</a></li>
+            <li><a href="flex-box-screenwidth.html">Chaotic flex-boxes</a></li>
+            <li>Menu-flex</li>
+            <li><a href="third-step.html">Moving on</a></li>
+        </ul>
+        </div>
+        <p>2) A flex-box container, individual flex-boxes with list items:</p>
+        <div class="no-wrap nav">
+            <div class="menubox"><a href="second-step.html">Second step</a></div>
+            <div class="menubox"><a href="flex-box-basic.html">Simple flex-box</a></div>
+            <div class="menubox"><a href="flex-box-screenwidth.html">Chaotic flex-boxes</a></div>
+            <div class="menubox">Menu-flex</div>
+            <div class="menubox"><a href="third-step.html">Moving on</a></div>
             </div>
-        
-            <div class="sub-one">
-        <p>If browser 1200px wide or less,<br />
-                then justify content: flex-start; (i.e. left)
-        </p>
-        <p>else, if wider, justify content: flex-end; (i.e. right)
-        </p>
-            
-            </div>
-        
-            <div class="sub-two">
-        <p>Or if the browser width is 800px or less,
-            then centre...
-        </p>
-            </div>
-        
+        <p>3) Simple menu, no flex-box container, but 'ul' has flex-box attributes:</p>
+        <ul class="dual-align nav">
+            <li><a href="second-step.html">Second step</a></li>
+            <li><a href="flex-box-basic.html">Simple flex-box</a></li>
+            <li><a href="flex-box-screenwidth.html">Chaotic flex-boxes</a></li>
+            <li>Menu-flex</li>
+            <li><a href="third-step.html">Moving on</a></li>
+        </ul>
+
+        <!-- Hide/Show "Hamburger menu" -->
+        <p>4) Hamburger menu when narrow width:</p>
+        <div class="burger-navigation">
+            <input id="burger-toggle" type="checkbox" />
+                <label class='menu-button-container' for="burger-toggle"> <!-- "flex" if media-query TRUE -->
+                    <div class='menu-button'></div>
+                </label>
+            <ul class="menu">
+                <li><a href="second-step.html">Second step</a></li>
+                <li><a href="flex-box-basic.html">Simple flex-box</a></li>
+                <li><a href="flex-box-screenwidth.html">Chaotic flex-boxes</a></li>
+                <li>Menu-flex</li>
+                <li><a href="third-step.html">Moving on</a></li>
+            </ul>
         </div>
         
-        </main>
+        <h2>Resize window to collapse menu</h2>
+    </main>
 
 
 </body>
