@@ -16,10 +16,11 @@
     <ul>
         <li>List just to show</li>
         <li>an alternative font</li>
-        <li>compared to H1, H2, P &c</li>
+        <li>compared to H1, H2, P &c
             <ul>
                 <li>Level 2 list item</li>
             </ul>
+        </li>
     </ul>
     <div class="all">
         <h2>Decendants == children, grand-children, and so on</h2>
@@ -28,14 +29,16 @@
         <code>And yet another 'code', but direct descendant of previous code, not a paragraph.</code>
         <ul>
             <li>List inside</li>
-            <li>the 'all' box</li>
-            <li>All are green, as they are all decendants of the box (&lt;div class="all"&gt;)</li>
-                <ul>
-                    <li>Level 2 list item</li>
-                    <ul>
-                        <li>Level 3 list item</li>
-                    </ul>
-                </ul>
+            <li>the 'child' box</li>
+            <li>None are green, as they are not direct decendants (children) of the box (&lt;div class="Children"&gt;)
+                <ol class="child">
+                    <li>Level 2 list item — here with the added 'child'-class (to the UL)
+                        <ol>
+                            <li>Level 3 list item</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
         </ul>
     </div>
 
@@ -46,13 +49,15 @@
         <ul>
             <li>List inside</li>
             <li>the 'child' box</li>
-            <li>None are green, as they are not direct decendants (children) of the box (&lt;div class="Children"&gt;)</li>
-                <ul class="child">
-                    <li>Level 2 list item — here with the added 'child'-class (to the UL)</li>
-                    <ul>
-                        <li>Level 3 list item</li>
-                    </ul>
-                </ul>
+            <li>None are green, as they are not direct decendants (children) of the box (&lt;div class="Children"&gt;)
+                <ol class="child">
+                    <li>Level 2 list item — here with the added 'child'-class (to the UL)
+                        <ol>
+                            <li>Level 3 list item</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
         </ul>
     </div>
 </body>
