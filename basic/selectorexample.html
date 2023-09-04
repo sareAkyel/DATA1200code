@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Combining selectors</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-size: 1.2rem;
+            margin-left: 5rem;
+            font-family: Helvetica, Arial, sans-serif; /* doesn't override <code> */
+        }
+
+        .upper-box {
+            background-color: antiquewhite;
+            padding-left: 12px; /* padding == inside "box", margin would have been outside */
+            padding-top: 2px;
+            padding-bottom: 6px;
+        }
+
+        .lower-box {
+            background-color: lightcyan;
+            padding-left: 12px; /* padding == inside "box", margin would have been outside */
+            padding-top: 2px;
+            padding-bottom: 6px;
+        }
+
+        li {
+            color: darkgreen;
+        }     
+      
+    </style>
+</head>
+
+<body>
+    <h1>Examples with selectors and measurements</h1>
+    <p>A list outside any box (div)</p>
+    <ul>
+        <li>List just to show</li>
+        <li>the defaults</li>
+        <li>after basic font has been specified</li>
+            <ol>
+                <li>Level 2 list item</li>
+            </ol>
+    </ul>
+    <div class="upper-box">
+        <h2>Decendants == children, grand-children, and so on</h2>
+        <p>This is a paragraph with the nested element <code>&lt;code&gt;, styled as it is a decendant.</code>(And we return to the P-style.)</p>
+        <code>&lt;code&gt; outside the P-element (not nested), styled as it is a decendant.</code><br>
+        <code>And yet another 'code', but direct descendant of previous code, not a paragraph.</code>
+        <ul>
+            <li>List inside</li>
+            <li>the 'all' box</li>
+            <li>All are green, as they are all decendants of the box (&lt;div class="all"&gt;)</li>
+                <ol>
+                    <li>Level 2 list item</li>
+                    <ol>
+                        <li>Level 3 list item</li>
+                    </ol>
+                </ol>
+        </ul>
+    </div>
+
+    <div class="lower-box">
+        <h2>Children == direct decendants only, not grand-children</h2>
+        <p>This is a paragraph with the nested element <code>&lt;code&gt;, <em>not</em> styled, as it is <em>not</em> a direct child.</code>(And we return to the P-style.)</p>
+        <code>&lt;code&gt; outside the P-element (not nested), styled as it is a direct child.</code><br>
+        <code>And yet another 'code', but direct descendant of previous code, not a paragraph.</code>
+        <ul>
+            <li>List inside</li>
+            <li>the 'child' box</li>
+            <li>None are green, as they are not direct decendants (children) of the box (&lt;div class="Children"&gt;)</li>
+                <ol class="child">
+                    <li>Level 2 list item — here with the added 'child'-class (to the UL)</li>
+                    <ol>
+                        <li>Level 3 list item</li>
+                    </ol>
+                </ol>
+        </ul>
+    </div>
+</body>
+</html>
