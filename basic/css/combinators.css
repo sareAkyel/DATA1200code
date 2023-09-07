@@ -2,6 +2,7 @@
 body {
     font-size: 1.2rem;
     margin-left: 5rem;
+    /* margin-right: 1rem; */
 }
 
 /* here, several elements are styled in one sentence — no relationship between these elements */
