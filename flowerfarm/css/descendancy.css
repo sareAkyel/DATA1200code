@@ -3,17 +3,20 @@
 
 ol li {
     color: blue;
-}
+    }
 
 ol > li {
     text-decoration: underline;
-}
+    }
 
 ol * li {
     font-weight: lighter;
-}
+    }
 
-.inline {display: inline;}
+.inline {
+    display: inline;
+    appearance: button;
+    }
 
 /* If you have bothered to read this code, 
 may I suggest you spend 3 minutes in "geek-space"?
