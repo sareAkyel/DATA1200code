@@ -15,7 +15,6 @@ ul.navigation {
 
 nav li {
     display: inline;
-    flex-wrap: wrap;
 }
 
 nav a {
@@ -32,7 +31,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-nav .current {
+nav .current { /** this class used for 'current' menu item **/
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9em;
     color: white;
