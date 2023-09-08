@@ -6,6 +6,7 @@ ul.navigation {
 
 nav li {
     display: inline;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -14,7 +15,8 @@ nav a {
     color: black;
     text-decoration: none;
     background-color: lightgrey;
-    padding: 10px;
+    padding: 4px;
+    line-height: 1.8rem;
 }
 
 nav a:hover {
