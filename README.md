@@ -13,3 +13,4 @@ The last is a rather ugly attempt to demonstrate scaling with flex-boxes. There 
 
 ***But there is a fourth directory?***   
 — Ah, yes, all depending, there may be an "Interactive"-folder. As of now, this is a back-up in case I want to bridge DATA1200 into DATA1700 (JavaScript) that is taught in the spring semester. You should ignore this for now. I may forget to push changes if I work on this, as it is currently ***not*** in my plan.
+I have this prosjekt now.
